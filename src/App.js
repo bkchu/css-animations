@@ -1,20 +1,20 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./App.css";
 
 class App extends React.Component {
   state = {
-    open: false
+    open: false // this is where you toggle, assigning views to true or false
   };
 
   toggleMenu = () => {
-    this.setState({ open: !this.state.open });
+    this.setState({ open: !this.state.open }); // !this.state.open just changes whatever it is to the opposite.
   };
 
   render() {
-    let dropdownClassnames = 'dropdown';
+    let dropdownClassnames = "dropdown"; // dropdown goes to div
     if (this.state.open) {
-      dropdownClassnames += ' dropdown--open';
-    }
+      dropdownClassnames += " dropdown--open";
+    } // this is where you check if it's open. If it is open, you add dropdown--open to the dropdown Classnames
 
     return (
       <div className="App">

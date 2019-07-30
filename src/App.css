@@ -9,8 +9,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
-  z-index: 3;
+  padding: 10px; /* This gives gives the outer part of box space, compressing the content inside */
+  z-index: 3; /* The higher the number the higher priority when it comes to showing. This will go on top of .dropdown which has z-index: 2 */
 }
 
 .navbar__title {
@@ -38,7 +38,7 @@
   transform-origin: top;
   transition: transform 300ms ease-in-out; */
   height: 0;
-  transition: height 1000ms ease-in-out;
+  transition: height 1000ms ease-in-out; /* This is the animation within 1000ms, to go in and out with the navbar menu. */
 }
 
 .dropdown--open {
@@ -66,5 +66,6 @@
 }
 
 .dropdown__item:first-of-type {
+  /* This selects the first li from top to bottom in that classname */
   margin-top: 0;
 }
